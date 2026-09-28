@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>page-01</title>
     <style>
         .small-text {
         font-size: 0.65rem;
@@ -21,6 +21,7 @@
         margin-top: auto;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
   </head>
 
@@ -28,23 +29,40 @@
 <body>
   <div class="row">
     <div class="col-2 bg-dark">
-      <h3 class="text-light text-center mt-3">Меню</h3>
-      <hr style="border-color: #fff;">
-      <div class="row">
+      <div class="row m-3" style="height: 30px;">
+          <div class="col-2"><i class="bi bi-bootstrap-fill text-light" style="font-size: 2rem"></i></div>
+          <div class="col-10"><h3 class="text-light text-start mt-2 ms-2">Меню</h3></div>
+      </div>
+
+
+      <hr class="ms-4" style="border-color: #fff;">
+      <div class="row ms-2">
         <form>
-          <button type="submit" class="text-start btn btn-dark w-100">Главная</button>
-          <button type="submit" class="text-start btn btn-dark w-100">Категории</button>
-          <button type="submit" class="text-start btn btn-dark w-100">Заказы</button>
-          <button type="submit" class="text-start btn btn-dark w-100">Контакты</button>
+          <button type="submit" class="text-start btn btn-dark w-100">
+              <i class="bi bi-house-door text-light" style="font-size: 1rem"></i>
+              Главная
+          </button>
+          <button type="submit" class="text-start btn btn-dark w-100">
+              <i class="bi bi-table text-light" style="font-size: 1rem"></i>
+              Категории
+          </button>
+          <button type="submit" class="text-start btn btn-dark w-100">
+              <i class="bi bi-box-fill text-light" style="font-size: 1rem"></i>
+              Заказы
+          </button>
+          <button type="submit" class="text-start btn btn-dark w-100">
+              <i class="bi bi-person-circle text-light" style="font-size: 1rem"></i>
+              Контакты
+          </button>
         </form>
       </div>
       <div class="bottom-element">
           <hr style="border-color: #fff;">
           <div class="row">
-              <div class="col-4">
-                  <img src="https://i.pinimg.com/736x/d6/02/42/d60242f5d675144fe658c411caeda8d3.jpg" class="img-fluid rounded-circle ms-2" style="width: 50px; height: 50px; object-fit: cover;" alt="Фото пользователя">
+              <div class="col-3 m-0">
+                  <img src="https://i.pinimg.com/736x/d6/02/42/d60242f5d675144fe658c411caeda8d3.jpg" class="img-fluid rounded-circle ms-2" style="width: 40px; height: 40px; object-fit: cover;" alt="Фото пользователя">
               </div>
-              <div class="col-8">
+              <div class="col-9 m-0">
                   <div class="dropdown">
                     <button class="text-start btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                       Пользователь
