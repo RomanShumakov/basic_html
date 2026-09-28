@@ -6,30 +6,52 @@
     <title>Bootstrap demo</title>
     <style>
         .small-text {
-    font-size: 0.65rem;
-    }
+        font-size: 0.65rem;
+        }
+        .row-full-height {
+        height: 100vh;
+        }
+        .col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        }
+        .bottom-element {
+        margin-top: auto;
+        }
     </style>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
   </head>
+
+
 <body>
   <div class="row">
-    <div class="col-2 me-0">
-        <div class="card text-bg-primary">
-            <div class="card-body">
-              <h3>Меню</h3>
-
-              <div class="row">
-                  <div>Главная</div>
-                  <div>Категории</div>
-                  <div>Заказы</div>
-                  <div>Контакты</div>
-              </div>
-            </div>
+    <div class="col-2 bg-dark">
+      <h3 class="text-light text-center mt-3">Меню</h3>
+      <hr style="border-color: #fff;">
+      <div class="row">
+        <form>
+          <button type="submit" class="text-start btn btn-dark w-100">Главная</button>
+          <button type="submit" class="text-start btn btn-dark w-100">Категории</button>
+          <button type="submit" class="text-start btn btn-dark w-100">Заказы</button>
+          <button type="submit" class="text-start btn btn-dark w-100">Контакты</button>
+        </form>
+      </div>
+      <div class="bottom-element">
+          <hr style="border-color: #fff;">
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Пользователь
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Профиль</a></li>
+              <li><a class="dropdown-item" href="#">Выход</a></li>
+            </ul>
           </div>
-
-
+      </div>
     </div>
-    <div class="col-10 ms-0">
+    <div class="col-10">
       <div class="row mt-5">
           <h2 class="text-center">Главная</h2>
           <p class="text-center">Вы находитесь на сайте продажи товаров</p>
@@ -97,6 +119,7 @@
         </div>
     </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js">
+</script>
 </body>
 </html>
