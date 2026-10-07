@@ -1,4 +1,5 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
+import os
 
 class SimpleWebHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -9,9 +10,10 @@ class SimpleWebHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
 
-    # Читаем HTML-файл контактов
-    # Убедись, что файл contacts.html лежит в той же папке, что и этот скрипт
-        with open('04_contacts-page.html', 'r', encoding='utf-8') as file:
+        # Читаем HTML-файл контактов
+        filepath = os.path.join("templates", "04_contacts-page.html")
+        # Убедись, что файл contacts.html лежит в той же папке, что и этот скрипт
+        with open(filepath, 'r', encoding='utf-8') as file:
             html_content = file.read()
 
         # Отправляем содержимое клиенту, перекодировав строку в байты
